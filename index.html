@@ -1,5 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #0d0808b9;
+        text-align: center;
+        color: #c6b6b6;
+        padding: 15px;
+    }
+    h1 {
+        color: #c5b6b6;
+    }
+    a {
+        display: inline-block;
+        margin: 10px;
+        padding: 10px 15px;
+        background-color: #007BFF;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+    a:hover {
+        background-color: #0056b3;
+    }
+    section {
+        display: none;
+        margin-top: 20px;
+        padding: 15px;
+        background-color: white;
+        border-radius: 5px;
+        
+    }
+    section:target {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 15px;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(85, 83, 83, 0.1);
+    }
+
+    img {
+        margin-top: 10px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(85, 83, 83, 0.1);
+
+    }
+    #win {
+        color: green;
+        font-weight: bold;
+        font-size: 19px;
+        margin-top: 20px;
+    }
+
+</style>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +64,7 @@
 <body>
     <h1>Welcome to Maze Runner</h1>
     <p>Your adventure begins here!</p>
-    <section id = "restart">
+    <section id = "start">
         <p>Here is the 1st ROUND</p>
         <img src="round1.jpg" alt="Round 1" width="300" height="300"></br>
         <a href="#a">Go Left</a>
@@ -27,26 +83,27 @@
     <section id = "c">
         <p>Here is 3rd Round</p>
         <img src="round3.jpg" alt="Round 3" width="300" height="300"></br>
-        <a href="#end">Go Dark</a>
-        <a href="#wrong">Go Light</a>
+        <a href="#win">Go Dark</a>
+        <a href="#e">Go Light</a>
     </section>
 
     <section id = "b">
         <p>Wrong Way! You are back to the start</p>
-        <a href="#">Restart</a>
+        <a href="#start">Restart</a>
     </section>
 
     <section id = "d">
         <p>Wrong Way! You are back to the start</p>
-        <a href="#">Restart</a>
+        <a href="#start">Restart</a>
     </section>
-    <section id = "wrong">
+    <section id = "e">
         <p>Wrong Way! You are back to the start</p>
-        <a href="#">Restart</a>
-
-    <section id="end">
+        <a href="#start">Restart</a>
+    </section>
+    <section id="win">
         <p>You Successfully Escaped The Maze 🥳</p>
     </section>
+
 
 </body>
 </html>
